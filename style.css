@@ -1,0 +1,166 @@
+body{
+  background-image: url(1.jpg);
+}
+h1{
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  width: 700px;
+  margin-left: 25%;
+  text-align: center;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 3px rgb(2, 2, 2);
+  box-shadow: 5px 5px 18px rgb(255, 255, 255);
+  border-radius: 100px;
+}
+h1:hover{
+  color:rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+}
+.incomeInput{
+  background-color: rgb(144, 33, 248);;
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 38%;
+  margin-top: 120px;
+  padding: 5px;
+  color: rgb(0, 0, 0);
+  box-shadow: 5px 5px 18px rgb(2, 2, 2);
+}
+.income{
+  width: 200px;
+  height: 30px;
+  text-align-last: right;
+  color: rgb(0, 0, 0);
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 20px;
+  background-color: rgb(144, 33, 248);
+  outline: none;
+}
+.expensesInput{
+  background-color: rgb(216, 22, 70);
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 38%;
+  margin-top: 20px;
+  padding: 5px;
+  color: rgb(2, 2, 2);
+  box-shadow: 5px 5px 18px rgb(2, 2, 2);
+}
+input{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  width: 180px;
+  height: 30px;
+  text-align-last: right;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-left: 20px;
+  background-color: rgb(216, 22, 70);
+  outline: none;
+}
+.calculation-block{
+  width:100%;
+  height:80px;
+  background:rgb(253, 253, 144);
+  top:350px;
+  left: 0px;
+  position:absolute;
+  
+}
+select{
+  background-color: rgb(255, 255, 255);
+  width: 50px;
+  margin-left: 500px;
+  margin-top: 6px;
+  padding: 7px;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(158, 147, 147);
+  border-radius: 10px;
+  box-shadow: 5px 5px 18px rgb(0, 0, 0);
+  outline: none;
+}
+.basic-information{
+  width: 350px;
+  height: 30px;
+  text-align-last: left;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(158, 147, 147);
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 18px rgb(0, 0, 0);
+}
+.value{
+  width: 50px;
+  height: 30px;
+  text-align-last: left;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(158, 147, 147);
+  padding-left: 10px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 5px 5px 18px rgb(0, 0, 0);
+}
+.result-block{
+  width:100%;
+  height:350px;
+  background:rgb(238, 114, 12);
+  opacity: 0.9;
+  position:absolute;
+  top:80px;
+  left:0px;
+}
+/*.result{
+
+}*/
+table{
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+td{
+  padding-top: 20px;
+  padding-bottom: 20px; 
+}
+caption{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: blue;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.table-income{
+  text-align: left;
+  width: 400px;
+  border: none;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 5px 5px 18px rgb(0, 0, 0);
+}
+.table-expenses{
+  text-align: left;
+  width: 400px;
+  border: none;
+  margin-left: 20px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 5px 5px 18px rgb(0, 0, 0);
+}
+.color-tr {
+  background-color: rgb(200, 255, 0);
+}
+iframe{
+  overflow:hidden;
+  border:0;
+  margin:0;
+  padding:0;
+  width:412px;
+  height:54px;
+  position: absolute;
+  left: 1170px;
+}
