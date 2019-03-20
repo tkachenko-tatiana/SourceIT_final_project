@@ -1,4 +1,6 @@
 import Income from "./Income";
+import Expense from "./Expense";
+import { calculateId, calculateMoney } from "./helper";
 
 class Budget {
   constructor() {
@@ -10,24 +12,33 @@ class Budget {
   }
 
   addItem(type, description, value) {
-
     if (type === "inc") {
-      const inc = new Income(1, description, value);
+      const inc = new Income(calculateId(this.incomes), description, value);
       this.incomes.push(inc);
     } else if (type === "exp") {
-      // HW
+      const exp = new Expense(calculateId(this.expenses), description, value);
+      this.expenses.push(exp);
     } else {
       console.log("Wrong type!!!");
     }
-    
+    this.calculateBudget();
   }
 
-  deleteItems() {
-    // HW
+  deleteItem(type, id) {
+    if (type === "inc") {
+      this.incomes = this.incomes.filter(item => item.id === id);
+    } else if (type === "exp") {
+      this.expenses = this.expenses.filter(item => item.id === id);
+    } else {
+      console.log("Wrong type!!!");
+    }
+    this.calculateBudget();
   }
 
   calculateBudget() {
-    //HW
+    this.totalIncomes = calculateMoney(this.incomes);
+    this.totalExpenses = calculateMoney(this.expenses);
+    this.total = this.totalIncomes - this.totalExpenses;
   }
 }
 export default Budget;
