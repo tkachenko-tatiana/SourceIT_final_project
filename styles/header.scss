@@ -1,0 +1,64 @@
+.header {
+  background-image: url(../public/header-bg.jpg);
+  background-attachment: fixed;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text {
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: $white;
+}
+
+.header-budget {
+  margin-bottom: 30px;
+  font-size: 70px;
+  text-align: center;
+  color: $white;
+}
+
+.budget-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 40px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: $white;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 2px 1px -1px rgba(0,0,0,0.12);
+  
+  &--income {
+    background-color: $transparentMint;
+  }
+  &--expense {
+    background-color: $transparentPurple;
+  }
+
+  &-text {
+    text-transform: uppercase;
+  }
+
+  &-badge {
+    background-color: $purple;
+    padding: 0 4px;
+    margin-left: 25px;
+    border-radius: 5px;
+  }
+}
+
+
+
+
