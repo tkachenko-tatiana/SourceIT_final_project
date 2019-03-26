@@ -2,15 +2,83 @@
 <html>
 
 <head>
-	<title>Budget tracker</title>
-	<meta charset="UTF-8" />
+    <title>Budget tracker</title>
+    <meta charset="UTF-8" />
+    <!-- <link rel="stylesheet" href="./src/styles.css"> -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic'
+rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">	
 </head>
 
 <body>
-	<div id="app"></div>
-
-	<script src="src/index.js">
-	</script>
+    <div id="app"></div>
+    <div class="main">
+        <div class="block">
+            <div class="slider">
+                <div class="available">Available Budget in January 2019</div>
+                <br>
+                <div class="total">
+                    +119.00
+                </div>
+                <div class="btn btn-first">
+                    INCOME <span class="number">+178.00</span><span class="percent">103%</span>
+                </div>
+                <div class="btn btn-second">
+                    EXPENSES <span class="number" title="33%">-59.00</span><span class="percent">33%</span>
+                </div>
+            </div>
+            <div class="add-line">
+                <select>
+                    <option>Income</option>
+                    <option>Expenses</option>
+                </select>
+                <input class="desc" type="text" value="Add description">
+                <input class="val" type="text" value="Value">
+                <div class="btn btn-third"> Add </div>
+            </div>
+        </div>
+        <div class="block">
+            <div class="budget">
+                <div class="income">
+                    <h2>Income</h2>
+                    <table class="table">
+                        <tr>
+                            <td>test</td>
+                            <td class="right">+12.00</td>
+                        </tr>
+                        <tr>
+                            <td>test 2</td>
+                            <td class="right">+100.00</td>
+                        </tr>
+                        <tr>
+                            <td>test 3</td>
+                            <td class="right">+66.00</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="expenses">
+                    <h2>Expenses</h2>
+                    <table class="table">
+                        <tr>
+                            <td>test</td>
+                            <td class="right">-12.00</td>
+                        </tr>
+                        <tr>
+                            <td>test 2</td>
+                            <td class="right">-100.00</td>
+                        </tr>
+                        <tr>
+                            <td>test 3</td>
+                            <td class="right">-66.00</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/index.js">
+    </script>
 </body>
 
 </html>
