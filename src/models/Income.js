@@ -1,8 +1,8 @@
-class Expense {
+class Income {
   constructor(id, description, value) {
     this.id = id;
     this.description = description;
-    this.value = value;
+    this.value = Number(value);
   }
 }
-export default Expense;
+export default Income;

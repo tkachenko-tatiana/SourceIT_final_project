@@ -1,4 +1,5 @@
-import Budget from "./Budget";
+import Budget from "./models/Budget";
+import View, { DOM_ELEMENTS } from "./View";
 
 class Application {
   constructor() {
@@ -6,17 +7,48 @@ class Application {
   }
 
   init() {
-    console.log("Application has started.");
-    console.log("Start: ", this);
-    this.budget.addItem("inc", "Salary", 3000);
-    console.log("1: ", this.budget);
-    this.budget.addItem("inc", "Some money", 500);
-    this.budget.addItem("inc", "And again some money", 1000);
-    this.budget.addItem("exp", "Ice cream", 100);
-    this.budget.addItem("exp", "Burger", 200);
-    console.log("2: ", this.budget);
-    this.budget.deleteItem("exp", 1);
-    console.log("3: ", this.budget);
+    // setup month
+
+    // setup initial budget
+    View.displayBudget();
+
+    // add listeners
+    this.setupEventListeners();
+  }
+
+  setupEventListeners() {
+    document.querySelector(DOM_ELEMENTS.submitBtn).addEventListener("click", () => { this.addItem(); });
+  }
+
+  addItem() {
+    // get data from inputs
+    const inputData = View.getInputData();
+    const isValid = this.validateUserData(inputData);
+    
+    if (isValid) {
+      // add item
+      const { type, description, value } = inputData;
+      this.budget.addItem(type, description, value);
+
+      // display item
+
+      // clear inputs
+
+      // get and display budget
+      console.log(this.budget);
+      View.displayBudget({
+        totalExpenses: this.budget.totalExpenses,
+        totalIncomes: this.budget.totalIncomes, 
+        total: this.budget.total
+      });
+    } else {
+      //HW
+    }
+  }
+
+  validateUserData(data) {
+    return true; // remove this line after you version is ready
+    //HW
   }
 }
 

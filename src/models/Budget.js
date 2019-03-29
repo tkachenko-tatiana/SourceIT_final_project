@@ -1,6 +1,6 @@
 import Income from "./Income";
 import Expense from "./Expense";
-import { calculateId, calculateMoney } from "./helper";
+import { calculateId, calculateMoney } from "../helper";
 
 class Budget {
   constructor() {
@@ -39,6 +39,14 @@ class Budget {
     this.totalIncomes = calculateMoney(this.incomes);
     this.totalExpenses = calculateMoney(this.expenses);
     this.total = this.totalIncomes - this.totalExpenses;
+  }
+
+  getBudget() {
+    return {
+      total: this.total,
+      totalExpenses: this.totalExpenses,
+      totalIncomes: this.totalIncomes,
+    };
   }
 }
 export default Budget;
