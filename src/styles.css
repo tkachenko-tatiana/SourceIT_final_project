@@ -136,9 +136,18 @@ h2 {
 }
 
 .number {
-    margin-left: 64px;
-    text-align: left;
+    /* margin-left: 100px; */
+    text-align: right;
+    /* margin-right:20px; */
 }
+
+
+.budget-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
 
 .percent {
     padding: 1px;
@@ -147,4 +156,8 @@ h2 {
     padding: 5px;
     border-left: 1px solid #fff;
 
+}
+
+.list{
+    list-style-type:none;
 }
