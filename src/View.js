@@ -19,8 +19,15 @@ class View {
     };
   }
 
-  static addListItem() {
-    // HW
+  static addListItem(item, type) {
+    const html = item.render();
+    if (type === "inc") {
+      document.querySelector(DOM_ELEMENTS.incomesContainer).insertAdjacentHTML("beforeend", html);
+    } else if(type === "exp") {
+      document.querySelector(DOM_ELEMENTS.expensesContainer).insertAdjacentHTML("beforeend", html);
+    } else {
+      console.log("Wrong type!!!");
+    }
   }
 
   static displayBudget(data = {}) {
@@ -29,6 +36,11 @@ class View {
     document.querySelector(DOM_ELEMENTS.budgetLabel).innerHTML = total;
     document.querySelector(DOM_ELEMENTS.incomeLabel).innerHTML = totalIncomes;
     document.querySelector(DOM_ELEMENTS.expensesLabel).innerHTML = totalExpenses;
+  }
+
+  static clearInputs() {
+    document.querySelector(DOM_ELEMENTS.inputDescription).value = "";
+    document.querySelector(DOM_ELEMENTS.inputValue).value = "";
   }
 }
 export default View;

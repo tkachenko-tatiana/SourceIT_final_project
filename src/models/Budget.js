@@ -12,16 +12,18 @@ class Budget {
   }
 
   addItem(type, description, value) {
+    let item;
     if (type === "inc") {
-      const inc = new Income(calculateId(this.incomes), description, value);
-      this.incomes.push(inc);
+      item = new Income(calculateId(this.incomes), description, value);
+      this.incomes.push(item);
     } else if (type === "exp") {
-      const exp = new Expense(calculateId(this.expenses), description, value);
-      this.expenses.push(exp);
+      item = new Expense(calculateId(this.expenses), description, value);
+      this.expenses.push(item);
     } else {
       console.log("Wrong type!!!");
     }
     this.calculateBudget();
+    return item;
   }
 
   deleteItem(type, id) {

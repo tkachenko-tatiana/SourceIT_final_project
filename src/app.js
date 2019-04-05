@@ -28,14 +28,15 @@ class Application {
     if (isValid) {
       // add item
       const { type, description, value } = inputData;
-      this.budget.addItem(type, description, value);
+      const item = this.budget.addItem(type, description, value);
 
       // display item
+      View.addListItem(item, type);
 
       // clear inputs
+      View.clearInputs();
 
       // get and display budget
-      console.log(this.budget);
       View.displayBudget({
         totalExpenses: this.budget.totalExpenses,
         totalIncomes: this.budget.totalIncomes, 
