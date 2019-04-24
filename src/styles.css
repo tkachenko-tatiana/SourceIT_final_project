@@ -1,5 +1,5 @@
 body {
-   font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .main {
@@ -108,6 +108,8 @@ body {
     text-align: left;
     margin: 10px auto;
     padding: 20px;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -136,28 +138,116 @@ h2 {
 }
 
 .number {
-    /* margin-left: 100px; */
     text-align: right;
-    /* margin-right:20px; */
 }
 
 
 .budget-block {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 
 .percent {
     padding: 1px;
-    color: #fff;
+    color: #b543a0;
+    background-color: #FDD;
     margin-left: 8px;
+    padding: 3px;
+    display:inline;
+    position:relative;
+    top: -45px;
+    left: 153px;
+    width:200px;
+    height:20px;
+    font-size:16px;
+
+}
+.percent-icon{
+    display: initial;
+    position: relative;
+    top: -45px;
+    left: 152px;
+    color:#b543a0;
+    font-size:16px;
+}
+
+
+.list {
+    list-style-type: none;
+}
+
+.red {
+    background-color: red;
+}
+
+#error-div {
+    position: relative;
+    margin: 0 auto;
+    width: 490px;
+    height: 30px;
+    margin-top: 10px;
+
+}
+
+.error {
+    position: relative;
+    margin: 0 auto;
+    width: 480px;
+    height: 28px;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: red;
+    border-color: #900;
+    background-color: #FDD;
     padding: 5px;
-    border-left: 1px solid #fff;
-
 }
 
-.list{
-    list-style-type:none;
+
+.income-item,
+.expense-item {
+    padding: 0px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b543a0;
 }
+
+.span-description {
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+.span-value {
+    max-width: 300px;
+}
+
+.btn-delete {
+    margin: 10px;
+    padding: 0px 5px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    display: inline;
+    width: 30px;
+    height:30px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    border: none;
+    background-color: #FDD;
+    color: black;
+}
+
+.btn-delete:active {
+    border: none;
+    background-color: #FDD;
+    color: black;
+}
+
+.btn-delete:visited {  border: none; }
