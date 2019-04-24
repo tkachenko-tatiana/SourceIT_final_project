@@ -2,15 +2,61 @@
 <html>
 
 <head>
-	<title>Budget tracker</title>
-	<meta charset="UTF-8" />
+    <title>Budget tracker</title>
+    <meta charset="UTF-8" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
 </head>
 
 <body>
-	<div id="app"></div>
-
-	<script src="src/index.js">
-	</script>
+    <div id="app"></div>
+    <div class="main">
+        <div class="block">
+            <div class="slider">
+                <div class="available">Available Budget in <span id="month">January</span> 2019</div>
+                <br>
+                <div class="total header-budget">
+                    
+                </div>
+                <div class="btn btn-first budget-block budget-block--income">
+                    <span class="budget-block-text">INCOME</span>
+                    <span class="number budget-block-value">+178.00</span>
+                    
+                </div>
+                <div class="btn btn-second budget-block budget-block--expense">
+                    <span class="budget-block-text">EXPENSES</span>
+                    <span class="number budget-block-value">-59.00</span>
+                </div>
+                <span class="percent"></span><span class="percent-icon">%</span>
+            </div>
+            <div class="add-line">
+                <select id="selector">
+                    <option value="inc">Income</option>
+                    <option value="exp">Expenses</option>
+                </select>
+                <input id="input-description" class="desc" type="text" value="" placeholder="Введите описание">
+                <input id="input-value" class="val" type="text" value="" placeholder="Значение">
+                <div id="btn-submit" class="btn btn-third"> Add </div>
+            </div>
+            <div id="error-div"></div>
+        </div>
+        <div class="block">
+            <div class="budget" id ="budget-content">
+                <div class="income">
+                    <h2>Income</h2>
+                    <ul id="list-income" class="list">
+                    </ul>
+                </div>
+                <div class="expenses">
+                    <h2>Expenses</h2>
+                    <ul id="list-expenses" class="list">
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/index.js">
+    </script>
 </body>
-
 </html>

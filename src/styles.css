@@ -1,3 +1,253 @@
 body {
-  font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: stretch;
+    font-size: 18px;
+    width: auto;
+    height: 800px;
+}
+
+.block {
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+.slider {
+    background: url(img/background.jpg) no-repeat;
+    background-size: 100%;
+    width: auto;
+    height: 350px;
+    text-align: center;
+    color: #000;
+    background-color: #EBEFF3;
+    margin: auto;
+}
+
+.available {
+    padding-top: 100px;
+}
+
+.total {
+    font-size: 50px;
+}
+
+.btn {
+    width: 250px;
+    height: 24px;
+    background-color: #44c25b;
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    margin: 15px auto;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.btn-first {
+    background-color: #b543a0;
+    text-align: left;
+
+}
+
+.btn-second {
+    text-align: left;
+
+}
+
+.btn-third {
+    width: 90px;
+    height: 24px;
+    display: inline;
+    border: 1px solid #44c25b;
+}
+
+.btn:active {
+    transform: translateY(1px);
+    filter: saturate(150%);
+}
+
+.btn:hover {
+    border-color: currentColor;
+}
+
+.add-line {
+    margin: 0 auto;
+    text-align: center;
+    height: 30px;
+    margin-top: 20px;
+
+}
+
+.add-line>input {
+    padding: 5px;
+    text-align: left;
+    height: 20px;
+    border: 1px solid #b543a0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.add-line>select {
+    padding: 5px;
+    text-align: left;
+    height: 32px;
+    border: 1px solid #b543a0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.budget {
+    width: 860px;
+    height: 200px;
+    text-align: left;
+    margin: 10px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.income {
+    float: left;
+    width: 50%;
+}
+
+.expenses {
+    float: left;
+    width: 50%;
+}
+
+h2 {
+    color: #b543a0;
+}
+
+.right {
+    text-align: right;
+}
+
+.table {
+    width: 245px;
+    text-align: left;
+
+}
+
+.number {
+    text-align: right;
+}
+
+
+.budget-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.percent {
+    padding: 1px;
+    color: #b543a0;
+    background-color: #FDD;
+    margin-left: 8px;
+    padding: 3px;
+    display:inline;
+    position:relative;
+    top: -45px;
+    left: 153px;
+    width:200px;
+    height:20px;
+    font-size:16px;
+
+}
+.percent-icon{
+    display: initial;
+    position: relative;
+    top: -45px;
+    left: 152px;
+    color:#b543a0;
+    font-size:16px;
+}
+
+
+.list {
+    list-style-type: none;
+}
+
+.red {
+    background-color: red;
+}
+
+#error-div {
+    position: relative;
+    margin: 0 auto;
+    width: 490px;
+    height: 30px;
+    margin-top: 10px;
+
+}
+
+.error {
+    position: relative;
+    margin: 0 auto;
+    width: 480px;
+    height: 28px;
+    margin-top: 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: red;
+    border-color: #900;
+    background-color: #FDD;
+    padding: 5px;
+}
+
+
+.income-item,
+.expense-item {
+    padding: 0px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #b543a0;
+}
+
+.span-description {
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+
+.span-value {
+    max-width: 300px;
+}
+
+.btn-delete {
+    margin: 10px;
+    padding: 0px 5px;
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    display: inline;
+    width: 30px;
+    height:30px;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-delete:hover {
+    border: none;
+    background-color: #FDD;
+    color: black;
+}
+
+.btn-delete:active {
+    border: none;
+    background-color: #FDD;
+    color: black;
+}
+
+.btn-delete:visited {  border: none; }
